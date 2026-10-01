@@ -49,9 +49,14 @@ defmodule MakeupHTML.Mixfile do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:makeup, "~> 1.2"},
+      {:makeup,
+       github: "elixir-makeup/makeup",
+       ref: "6773349d54f55fd8a408c53a50108c0f41bff271",
+       override: true},
       {:stream_data, "~> 1.0", only: :test},
-      {:ex_doc, "~> 0.24", only: :dev, runtime: false}
+      {:ex_doc, "~> 0.24", only: :dev, runtime: false},
+      {:benchee, "~> 1.0", only: :dev},
+      {:benchee_markdown, "~> 0.3", only: :dev}
     ]
   end
 end
